@@ -1,0 +1,42 @@
+.tab-content {
+    border-top: none;
+    padding: 10px;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #0098D1;
+    color: white;
+}
+
+.box-item-news {
+    border-bottom: 1px solid #ebebeb;
+    padding: 16px 0;
+    padding-left: 28px;
+    position: relative;
+}
+
+.box-item-news::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: 1px solid #8b8b8b;
+    display: flex;
+    border-radius: 50%;
+    position: absolute;
+    left: 9px;
+    top: 24px;
+}
+/* .dropdown{
+    position: relative;
+}
+.dropdown .dropdown-menu {
+    inset: 0px auto auto 100px;
+} */
