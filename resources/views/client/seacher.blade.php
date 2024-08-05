@@ -21,9 +21,9 @@
                 </div>
                 {{-- <form action="{{ route('seacher.submit') }}" method="POST"> --}}
                     <select class="form-select" name="category" aria-label="Default select example">
-                        <option selected>Tìm kiếm theo thể loại</option>
+                        <option selected value="">Tìm kiếm theo thể loại</option>
                         @foreach($categoryAll as $cate)
-                        <option value="{{$cate->name}}" @if(old('category',$inputCate)==$cate->id) selected @endif>
+                        <option value="{{$cate->id}}" @if(old('category',$inputCate)==$cate->id) selected @endif>
                             {{$cate->name}}
                         </option>
                         @endforeach
@@ -38,7 +38,7 @@
                 </div>
                 {{-- <form action="{{ route('seacher.submit') }}" method="POST"> --}}
                     <select class="form-select" name="time" aria-label="Default select example">
-                        <option selected>Tìm kiếm theo thời gian</option>
+                        <option selected value="">Tìm kiếm theo thời gian</option>
                         <option value="now" @if(old('time',$time )=='now' ) selected @endif>Hiện tại</option>
                         <option value="dayAgo" @if(old('time',$time )=='dayAgo' ) selected @endif>1 ngày trước
                         </option>
@@ -49,7 +49,7 @@
                         <option value="yearAgo" @if(old('time',$time )=='yearAgo' ) selected @endif>1 năm trước
                         </option>
                     </select>
-                    
+
             </div>
 
         </div>
@@ -59,7 +59,7 @@
 
             <a href="" class="box-category-item-main-left text-decoration-none text-dark pe-3 d-flex gap-3 mb-3"
                 >
-                <img src="{{asset('images/'.$art->img)}}" alt="lỗi ảnh " id="anh" width="250px">
+                <img src="{{asset($art->img)}}" alt="lỗi ảnh " id="anh" width="250px">
                 <div class="content_category-item-main-left">
                     <h4>
                         {{$art->title}}

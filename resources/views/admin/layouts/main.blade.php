@@ -14,7 +14,7 @@
         <div id="layoutSidenav">
             @include('admin.layouts.partials.aside')
             <div id="layoutSidenav_content">
-                <main>
+                <main class="p-5 mt-3">
               @yield('content')
                 </main>
                 @include('admin.layouts.partials.footer')

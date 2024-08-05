@@ -15,8 +15,9 @@ class Article extends Model
         'content',
         'img',
         'views',
-        'category__one_id',
-        'user_id'
+        'category_id',
+        'user_id',
+        'status'
 
     ];
     public function category()

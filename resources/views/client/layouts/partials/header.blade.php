@@ -77,8 +77,8 @@
                 <div style="width: 250px; height: 40px; border-radius: 5px " class="box_search border p-2 ">
                     <button type="submit" class="border-0 bg-transparent"><i class="fa-solid fa-magnifying-glass "
                             style="color: #555555;"></i></button>
-                    <input style="border: none ; outline: none" class="ms-2" type="text" name="key"
-                        value="" id="" placeholder="Tìm kiếm " required>
+                    <input style="border: none ; outline: none" class="ms-2" type="text" name="key" value="" id=""
+                        placeholder="Tìm kiếm " required>
                 </div>
             </form>
         </div>
@@ -114,157 +114,56 @@
 
             </div>
             <div>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <span>
-                        <i class="fa-regular fa-user" style="color: #000000;"></i>
-                    </span><br>
-                    <span>
-                        Đăng nhập
-                    </span>
-                </button>
+                <span>
+                    <i class="fa-regular fa-user" style="color: #000000;"></i>
+                </span><br>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                                    <li class="nav-item d-flex justify-content-center" role="presentation"
-                                        style="width: 228px;">
-                                        <button class="nav-link active w-100" id="pills-dn-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-dn" type="button" role="tab" aria-controls="pills-dn"
-                                            aria-selected="true">Đăng
-                                            nhập</button>
-                                    </li>
-                                    <li class="nav-item d-flex justify-content-center" role="presentation"
-                                        style="width: 228px;">
-                                        <button class="nut-bt nav-link w-100" id="pills-dk-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-dk" type="button" role="tab" aria-controls="pills-dk"
-                                            aria-selected="true">Đăng
-                                            ký</button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="modal-body">
-                                <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-dn" role="tabpanel"
-                                        aria-labelledby="pills-dn-tab" tabindex="0">
-                                        <div class="col-12 mt-1 p-3 ">
-                                            <h2 class="text-center mb-4">ĐĂNG
-                                                NHẬP TÀI KHOẢN</h2>
-                                            <div class="duongke row d-flex justify-content-center ">
-                                                <div class="col-12 d-flex justify-content-center gap-2">
-                                                    <div class="d-flex justify-content-center bg-primary p-2  rounded-2"
-                                                        style="width: 220px;"><a href="#"
-                                                            class="text-light text-decoration-none"><i
-                                                                class="fa-brands fa-facebook text-bg-primary"></i>
-                                                            FACEBOOK</a></div>
-                                                    <div class="d-flex justify-content-center bg-danger p-2 rounded-2"
-                                                        style="width: 220px;"><a href="#"
-                                                            class="text-decoration-none text-light"><i
-                                                                class="fa-brands fa-google me-1"></i>GOOGLE</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-5 mb-2  ">
-                                                <form>
-                                                    <div class="mb-3">
-                                                        <label for="" class="d-flex fw-semibold">Email</label>
-                                                        <input type="email" class="form-control" placeholder="Email">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="" class="d-flex fw-semibold">Mật khẩu</label>
-                                                        <input type="password" class="form-control"
-                                                            placeholder="Mật khẩu">
-                                                    </div>
-                                                    <div class="mb-3 form-check">
-                                                        <input type="checkbox" class="form-check-input"
-                                                            id="exampleCheck1">
-                                                        <label class="form-check-label d-flex" for="exampleCheck1">Ghi
-                                                            nhớ tài
-                                                            khoản</label>
-                                                    </div>
-                                                    <button type="submit" class="btn btn-secondary"
-                                                        style="width: 100%;">Đăng
-                                                        nhập</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-dk" role="tabpanel"
-                                        aria-labelledby="pills-dk-tab" tabindex="0">
-                                        <div class="col-12 mt-1 p-3 ">
-                                            <h2 class="text-center mb-4">ĐĂNG
-                                                KÝ TÀI KHOẢN</h2>
 
-                                            <div class="duongke row d-flex justify-content-center ">
-                                                <div class="col-12 d-flex justify-content-center gap-2">
-                                                    <div class="d-flex justify-content-center bg-primary p-2 rounded-2"
-                                                        style="width: 220px;"><a href="#"
-                                                            class="text-light text-decoration-none"><i
-                                                                class="fa-brands fa-facebook text-bg-primary"></i>
-                                                            FACEBOOK</a></div>
-                                                    <div class="d-flex justify-content-center bg-danger p-2 rounded-2"
-                                                        style="width: 220px;"><a href="#"
-                                                            class="text-decoration-none text-light"><i
-                                                                class="fa-brands fa-google me-1"></i>GOOGLE</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-5 mb-2">
-                                                <form>
-                                                    <div class="mb-3">
-                                                        <label for="" class="d-flex fw-semibold">Họ tên </label>
+                @guest
+                <div class="d-flex align-content-center">
+                    @if (Route::has('login'))
+                    <li class="nav-item " style="list-style: none">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Đăng nhập') }}</a>
+                    </li>
+                    @endif
 
-                                                        <input type="text" class="form-control" placeholder="Họ và Tên">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="" class="d-flex fw-semibold">Email</label>
-
-                                                        <input type="email" class="form-control" placeholder="Email">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="" class="d-flex fw-semibold">Mật khẩu</label>
-
-                                                        <input type="password" class="form-control"
-                                                            placeholder="Tạo mật khẩu">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="" class="d-flex fw-semibold">Nhập lại mật
-                                                            khẩu</label>
-
-                                                        <input type="password" class="form-control"
-                                                            placeholder="Xác nhận lại mật khẩu">
-                                                    </div>
-                                                    <div class="mb-3 form-check">
-                                                        <input type="checkbox" class="form-check-input"
-                                                            id="exampleCheck1">
-                                                        <label class="form-check-label" for="exampleCheck1">Ghi
-                                                            nhớ tài
-                                                            khoản</label>
-                                                    </div>
-                                                    <button type="submit" class="btn btn-secondary"
-                                                        style="width: 100%;">Đăng
-                                                        ký
-                                                        ngay</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="modal-footer">
-                                Bạn đã đăng nhập hoặc tạo cài khoản là đồng ý với điều khoản sử dụng và chính sách
-                                bảo mật của BÁO Thanh niên
-                            </div>
-                        </div>
-                    </div>
+                    {{-- @if (Route::has('register'))
+                    <li class="nav-item" style="list-style: none">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Đăng ký') }}</a>
+                    </li>
+                    @endif --}}
                 </div>
 
+                @else
+                <li class="nav-item dropdown" style="list-style: none">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+                    {{-- {{ dd(Auth::user()) }} --}}
+
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        @if (Auth::user()->type === 'admin')
+                        <div>
+                            <a class="dropdown-item"
+                                href="{{ route('category.index',['user' => Auth::user()->id]) }}">admin</a>
+                        </div>
+                        @endif
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+
+
+                </li>
+                @endguest
             </div>
+
+
         </div>
     </div>
 

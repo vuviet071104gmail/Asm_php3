@@ -15,8 +15,8 @@
 
         <a href="{{route('article',$item)}}" class="  img_cate_item text-dark text-decoration-none gap-3"
             style="border-bottom: 1px solid #ebebeb; height: 80px">
-            <img src="{{asset('images/'.$item->img)}}" alt="lỗi ảnh " id="anh" width="100% "
-                style="height: 180px">
+            <img src="{{asset($item->img)}}" alt="lỗi ảnh " id="anh" width="100%"
+                style="height: 200px">
             <p style="font-size: 14px">{{$item->summary}}</p>
         </a>
         @endforeach
@@ -33,7 +33,7 @@
         <a href="{{route('article',$item)}}"
             class=" d-flex  img_cate_item text-dark text-decoration-none gap-3"
             style="border-bottom: 1px solid #ebebeb; height: 100px">
-            <img src="{{asset('images/'.$item->img)}}" alt="lỗi ảnh " id="anh" width="84px" height="84px">
+            <img src="{{asset($item->img)}}" alt="lỗi ảnh " id="anh" width="84px" height="84px">
             <span>{{$item->title}}</span>
         </a>
         @endif

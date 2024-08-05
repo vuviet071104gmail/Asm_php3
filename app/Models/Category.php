@@ -31,4 +31,4 @@ class Category extends Model
     {
         return $this->hasManyThrough(Article::class, Category::class, 'parent_id');
     }
-}
+    }

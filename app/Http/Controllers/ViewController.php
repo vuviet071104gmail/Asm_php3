@@ -1,23 +1,27 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Events\ArticleViewed;
 use App\Models\Article;
 use App\Models\Category;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Action;
 use Illuminate\Support\Facades\DB;
+
 class ViewController extends Controller
 {
     public function index()
     {
         $categoryAll = Category::whereNull('parent_id')->with('children')->get();
         $categoryOne = Category::whereNotNull('parent_id')->get();
-        $article = Article::query()->orderByDesc('created_at')->orderByDesc('views')->get();
+        $article = Article::query()->orderByDesc('created_at')->get();
         $gocnhin = Article::query()->orderBy(DB::raw('RAND()'))->take(5)->get();
         $articletime = Article::query()->orderByDesc('created_at')->get();
         $articleview = Article::query()->orderByDesc('views')->get();
-        $outstanding = Article::query()->where('status','=','1')->latest('created_at')->get();
-        $cateAllAcrticle = Category::query()->whereNull('parent_id')->with('articleCategory')->paginate(5);
+        $outstanding = Article::query()->where('status', '=', '1')->latest('created_at')->get();
+        $cateAllAcrticle = Category::query()->whereNull('parent_id')->with('articleCategory')->paginate(3);
         return view('client.home', compact(
             'categoryAll',
             'categoryOne',
@@ -67,6 +71,7 @@ class ViewController extends Controller
     }
     public function article(Article $article)
     {
+        // dd($article);
         $categoryAll = Category::whereNull('parent_id')->with('children')->get();
         // $articleDetail1 = Article::query()->where('id', $article->id)->with(['category', 'user'])->first();
         $articleDetail = Article::join('categories', 'articles.category_id', '=', 'categories.id')
@@ -74,10 +79,11 @@ class ViewController extends Controller
             ->select('articles.*', 'categories.*', 'categories.name as namecate', 'users.*', 'users.name as nameuser')
             ->where('articles.id', $article->id)
             ->first();
+
         $articleChild = Article::where([['category_id', $article->category_id], ['id', '<>', $article->id]])->get();
         $articletime = Article::query()->orderByDesc('created_at')->limit(8)->get();
         $articleview = Article::query()->orderByDesc('views')->get();
-        // dd($articleChild);
+        event(new ArticleViewed($article));
         return view('client.article', compact(
             'categoryAll',
             'articleDetail',
@@ -94,7 +100,7 @@ class ViewController extends Controller
         $inputKey = $request->old('key', $request->input('key'));
         $inputTime = $request->old('time', $request->input('time'));
         $inputCate = $request->old('category', $request->input('category'));
-        // Lấy dữ liệu 
+        // Lấy dữ liệu
         $valueKey =  $request->input('key');
         $time =  $request->input('time');
         $catechilde =  $request->input('category');
@@ -142,7 +148,7 @@ class ViewController extends Controller
         $article  = Article::query()
             ->when($valueKey, function ($query, $valueKey) {
                 return $query->where('articles.title', 'like', "%{$valueKey}%")
-                    ->orWhere('articles.content', 'like', "%{$valueKey}%");
+                    ->where('articles.content', 'like', "%{$valueKey}%");
             })
             ->when($timeOver, function ($query, $timeOver) {
                 return $query

@@ -29,7 +29,7 @@
             @foreach($cateParent->articleCategory()->latest('id')->limit(1)->get() as $cart)
             <a href="{{route('article',$cart)}}" class="box-category-item-main-left text-decoration-none text-dark pe-3"
                 style="width: 65% ; border-right: 1px solid gainsboro ">
-                <img src="{{asset('images/'.$cart->img)}}" alt="lỗi ảnh " id="anh" width="100%">
+                <img src="{{asset($cart->img)}}" alt="lỗi ảnh " id="anh" width="100%">
                 <div class="content_category-item-main-left">
                     <h4>
                         {{$cart->title}}
@@ -45,7 +45,7 @@
                 @if(!$loop->first)
                 <div class="mb-2 pb-2" style="font-size: 13px ; border-bottom: 1px solid #c2c1c1">
                     <a href="{{route('article',$cart)}}" class="item-related_content text-decoration-none text-dark  ">
-                        <img src="{{asset('images/'.$cart->img)}}" alt="lỗi ảnh " id="anh" width="100%">
+                        <img src="{{asset($cart->img)}}" alt="lỗi ảnh " id="anh" width="100%">
 
                         <div class="content_category-item-main-right">
                             <h6>
@@ -63,7 +63,7 @@
             @foreach($cateParent->articleCategory()->latest('id')->limit(5)->get() as $cart)
             @if($loop->remaining <2) <a href="{{route('article',$cart)}}"
                 class=" box-title-text text-decoration-none text-dark d-flex gap-2 ">
-                <img src="{{asset('images/'.$cart->img)}}" alt="lỗi ảnh " id="anh" width="146px">
+                <img src="{{asset($cart->img)}}" alt="lỗi ảnh " id="anh" width="146px">
                 <span style=" font-size: 14px"> {{$cart->title}}</span>
                 </a>
                 @endif
@@ -84,7 +84,7 @@
         <div class="box-category-middle list__main_check">
             <a href="{{route('article',$cart)}}"
                 class=" box-title-text text-decoration-none text-dark d-flex gap-4 mb-3" style="height: 205px;">
-                <img src="{{asset('images/'.$cart->img)}}" alt="lỗi ảnh " id="anh" width="40%">
+                <img src="{{asset($cart->img)}}" alt="lỗi ảnh " id="anh" width="40%">
                 <div class="content_title_posts" style=" width: 57%;">
                     <span class="key_cateall  fw-semibold" style="color: #cfcfcf">
                         {{$cateParent->name}}

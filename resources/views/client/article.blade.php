@@ -26,7 +26,7 @@
         <section class="author_article ps-2 pe-2 pt-2 pb-2" style=" background-color: aliceblue ">
             <div class=" d-flex justify-content-between ">
                 <a class="text-dark text-decoration-none" href="#">
-                    <img class="avarta img-thumbnail" src="{{asset('images/'.$articleDetail->img)}}" alt="lỗi ảnh "
+                    <img class="avarta img-thumbnail" src="{{asset($articleDetail->img)}}" alt="lỗi ảnh "
                         id="anh" width="50px">
                     <span>{{$articleDetail->nameuser}} </span>
                     <span><i class="fa-solid fa-minus" style="color: #000000;"></i></span>
@@ -59,7 +59,7 @@
             <div class="content_article">
                 {!! $articleDetail->content !!}
             </div>
-            <form class="form-control">
+            <form class="form-control mt-5">
                 <div class="mb-3">
                     <label class="fw-bold fs-5 mb-2" style="border-bottom: 1px solid #62b8f9"
                         for="floatingTextarea2 ">Bình luận </label>
@@ -70,11 +70,11 @@
                 <button type="submit" class="btn btn-primary">Gửi bình luận </button>
             </form>
 
-            <form action="" method="post">
+            {{-- <form action="" method="post">
                 @csrf
                 <textarea id="editor1" name="content"></textarea>
                 <button type="submit">Gửi </button>
-            </form>
+            </form> --}}
             {{-- <div style="width: 800px">
                 {!! $articleDetail['content'] !!}
             </div> --}}
@@ -92,7 +92,7 @@
                 <a href="{{route('article',$item)}}"
                     class=" d-flex align-items-center img_cate_item text-dark text-decoration-none gap-3"
                     style="border-bottom: 1px solid #ebebeb; height: 100px">
-                    <img src="{{asset('images/'.$item->img)}}" alt="lỗi ảnh " id="anh" width="110px" height="70px">
+                    <img src="{{asset($item->img)}}" alt="lỗi ảnh " id="anh" width="110px" height="70px">
                     <span>{{$item->title}}</span>
                 </a>
                 @endforeach
@@ -110,7 +110,7 @@
         @foreach($articleChild as $item)
         <div class="" style="width: 317px; border-bottom: 1px solid #dbdbdb">
             <a href="{{route('article',$item)}}" class="text-dark text-decoration-none">
-                <img src="{{asset('images/'.$item->img)}}" alt="lỗi ảnh " id="anh" width="100% " style="height: 200px">
+                <img src="{{asset($item->img)}}" alt="lỗi ảnh " id="anh" width="100% " style="height: 200px">
                 <p> {{$item->title}}</p>
             </a>
         </div>
@@ -125,7 +125,7 @@
         <div class="col-3 pe-4">
             <a href="{{route('article',$item)}}" class=" d-flex  img_cate_item text-dark text-decoration-none gap-3"
                 style="border-bottom: 1px solid #ebebeb; height: 100px">
-                <img src="{{asset('images/'.$item->img)}}" alt="lỗi ảnh " id="anh" width="84px" height="84px">
+                <img src="{{asset($item->img)}}" alt="lỗi ảnh " id="anh" width="84px" height="84px">
                 <span>{{$item->title}}</span>
             </a>
         </div>

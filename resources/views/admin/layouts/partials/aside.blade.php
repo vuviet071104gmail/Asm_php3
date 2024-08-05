@@ -3,13 +3,14 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
-                <a class="nav-link" href="{{route('category.index')}}">
+                <a class="nav-link" href="{{route('homeadmin')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Home
                 </a>
                 <div class="sb-sidenav-menu-heading">Interface</div>
-                <a class="nav-link collapsed" href="{{route('category.index')}}" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
-                    aria-expanded="false" aria-controls="collapseLayouts">
+                <a class="nav-link collapsed" href="{{route('category.index')}}"
+              {{-- data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"--}}
+                >
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                     Category
                 </a>
@@ -21,10 +22,10 @@
                         <a class="nav-link" href="layout-sidenav-light.html"> Category</a>
                     </nav>
                 </div> --}}
-                <a class="nav-link collapsed" href="{{route('product.index')}}"
+                <a class="nav-link collapsed" href="{{route('article.index')}}"
                  {{-- data-bs-toggle="collapse" data-bs-target="#collapsePages"  aria-expanded="false" aria-controls="collapsePages"--}}>
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                    Product
+                    Article
                     {{-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> --}}
                 </a>
                 {{-- <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
